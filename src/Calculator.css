@@ -1,0 +1,18 @@
+/* https://www.joomlashack.com/blog/tutorials/center-and-align-items-in-css-grid/ */
+.calculator-grid-container {
+  height: 70vh;
+  width: 60vw;
+  max-width: 50vh;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  background-color:#2e323a;
+  border-radius: 1%;
+  box-shadow: 0 0 10px whitesmoke;
+  /* grid container config */
+  display: grid;
+  grid-template-columns: auto auto auto auto; /* 4 columns */
+  grid-template-rows: repeat(6, 1fr); /* 4 rows, each occupying 1 equal fraction of the available free space; note, that free space is calculated after! any non-flexible items*/
+  grid-gap: 0px;
+  padding: 10px; /* visual distance from the boarder */
+}

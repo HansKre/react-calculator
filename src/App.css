@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -26,6 +26,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.github {
+    margin-top: 15px; /* add margins to p-tag, since we remove it on all p-tags in Display.css */
 }
 
 @keyframes App-logo-spin {
