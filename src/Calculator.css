@@ -1,8 +1,7 @@
 /* https://www.joomlashack.com/blog/tutorials/center-and-align-items-in-css-grid/ */
 .calculator-grid-container {
-  height: 70vh;
-  width: 60vw;
-  max-width: 50vh;
+  height: calc(var(--vh, 1vh) * 70);
+  width: 75vw;
   border-style: solid;
   border-width: 3px;
   border-color: white;
@@ -15,4 +14,18 @@
   grid-template-rows: repeat(6, 1fr); /* 4 rows, each occupying 1 equal fraction of the available free space; note, that free space is calculated after! any non-flexible items*/
   grid-gap: 0px;
   padding: 10px; /* visual distance from the boarder */
+}
+
+/* avoid getting to wide on desktop and landscape */
+@media screen and (min-width: 600px) {
+  .calculator-grid-container {
+    max-width: 50vh;
+  }
+}
+
+@media screen and (max-aspect-ratio: 4/7) {
+  .calculator-grid-container {
+    max-height: calc(var(--vh, 1vh) * 60);
+    height: calc(var(--vh, 1vh) * 60);
+  }
 }

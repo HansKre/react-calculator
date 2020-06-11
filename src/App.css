@@ -15,7 +15,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  box-sizing: border-box;
+  min-height: calc(var(--vh, 1vh) * 100); /* --vh is calculated in App.js */
+  max-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,5 +40,20 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-aspect-ratio: 4/7) {
+  .App-link {
+    color: #7561fb;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .App-header {
+    font-size: calc(10px + 1vmin);
   }
 }

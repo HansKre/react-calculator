@@ -154,6 +154,7 @@ export default class Calculator extends React.Component {
       const MAX_DIGITS = 1000000000000000;
       let answer;
       try {
+        // eslint-disable-next-line no-eval
         answer = Math.round(MAX_DIGITS * eval(f)) / MAX_DIGITS;
       } catch (error) {
         answer = 'NAN';
